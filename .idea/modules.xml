@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thermal and Dimensional Calculator.iml" filepath="$PROJECT_DIR$/.idea/modules/Thermal and Dimensional Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Thermal_and_Dimensional_Calculator.iml" filepath="$PROJECT_DIR$/.idea/modules/Thermal_and_Dimensional_Calculator.iml" group="Thermal_and_Dimensional_Calculator" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="Thermal and Dimensional Calculator/app" />
     </modules>
   </component>
 </project>
