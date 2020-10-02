@@ -49,15 +49,15 @@ public class MainActivity extends AppCompatActivity {
         formula = new Formula();
         //if(qw_.getText().toString() == "")
            formula.values.put("Qw", qw_.getText().toString());
-
-        for(int i = 0; i< formula.exp.size(); i++)
+           int i,j;
+        for( i = 0; i< formula.exp.size(); i++)
         {
             try
             {
                 System.out.println(i +" "+ formula.exp.get(i).res);
                 Expression expression = new Expression(formula.exp.get(i).form).with(formula.exp.get(i).var.get(0), formula.values.get(formula.exp.get(i).var.get(0)));
 
-                for(int j=1; j<formula.exp.get(i).var.size(); j++)
+                for(j=1; j<formula.exp.get(i).var.size(); j++)
                 {
                     expression = expression.and(formula.exp.get(i).var.get(j), formula.values.get(formula.exp.get(i).var.get(j)));
                 }
