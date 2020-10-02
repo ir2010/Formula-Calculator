@@ -49,15 +49,15 @@ public class MainActivity extends AppCompatActivity {
         formula = new Formula();
         //if(qw_.getText().toString() == "")
            formula.values.put("Qw", qw_.getText().toString());
-
-        for(int i = 0; i< formula.exp.size(); i++)
+           int i,j;
+        for( i = 0; i< formula.exp.size(); i++)
         {
             try
             {
                 System.out.println(i +" "+ formula.exp.get(i).res);
                 Expression expression = new Expression(formula.exp.get(i).form).with(formula.exp.get(i).var.get(0), formula.values.get(formula.exp.get(i).var.get(0)));
 
-                for(int j=1; j<formula.exp.get(i).var.size(); j++)
+                for(j=1; j<formula.exp.get(i).var.size(); j++)
                 {
                     expression = expression.and(formula.exp.get(i).var.get(j), formula.values.get(formula.exp.get(i).var.get(j)));
                 }
@@ -82,11 +82,11 @@ public class MainActivity extends AppCompatActivity {
         String[] title2 = {"Gw", "GL", "T_wm", "F", "Gl", "Ga", "Gl", "rho_a", "Gf", "F_rf", "D_fan", "u", "n_fan", "N_fan", "Qc"};
         String[] result = new String[numOfFormula];
         String[] unit = {"Kg/s", "m^3/s", "K", "m^2", "Kg/s", "Kg/s", "Kg/s", "Kg/m^3", "Kg/s", "m^2", "m", "m/s", "rpm", "kW", "J/s"};
-
-        for(int i=0; i<numOfFormula; i++)
+        int j;
+        for(j=0; j<numOfFormula; j++)
         {
-            System.out.println(formula.values.get(title2[i]));
-            result[i] = formula.values.get(title2[i]);
+            System.out.println(formula.values.get(title2[j]));
+            result[j] = formula.values.get(title2[j]);
         }
 
         MyListAdapter adapter = new MyListAdapter(this, title1, title2, result, unit);
