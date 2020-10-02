@@ -10,6 +10,7 @@ public class Formula {
     {
         String res;
         String form;
+        String asdfgh;
         ArrayList<String> var;
 
         Exp(String r, String f, ArrayList<String> v)
